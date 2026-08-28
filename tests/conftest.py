@@ -11,7 +11,7 @@ from collections.abc import AsyncGenerator
 
 
 os.environ["DATABASE_URL"] = (
-    "postgresql+psycopg://bloguser:blogpass@localhost/test_blog"
+    "postgresql+asyncpg://neondb_owner:npg_ZSRFKWcgX0G5@ep-royal-thunder-ays0wywa-pooler.c-5.us-east-2.aws.neon.tech/blog?sslmode=require&channel_binding=require"
 )
 
 os.environ["S3_BUCKET_NAME"] = "test-bucket"
