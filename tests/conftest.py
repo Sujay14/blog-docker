@@ -2,6 +2,7 @@ import asyncio
 import os
 import sys
 
+
 if sys.platform == "win32":
     asyncio.set_event_loop_policy(
         asyncio.WindowsSelectorEventLoopPolicy()
@@ -10,9 +11,7 @@ if sys.platform == "win32":
 from collections.abc import AsyncGenerator
 
 
-os.environ["DATABASE_URL"] = (
-    "postgresql+asyncpg://neondb_owner:npg_ZSRFKWcgX0G5@ep-royal-thunder-ays0wywa-pooler.c-5.us-east-2.aws.neon.tech/blog?sslmode=require&channel_binding=require"
-)
+# os.environ["DATABASE_URL"] 
 
 os.environ["S3_BUCKET_NAME"] = "test-bucket"
 os.environ["SECRET_KEY"] = "test-secret-key-for-testing-only"
