@@ -38,6 +38,7 @@ from main import app
 pytest_plugins = ["anyio"]
 
 @pytest.fixture(scope="session")
+
 def anyio_backend():
     return "asyncio"
 
@@ -45,6 +46,7 @@ def anyio_backend():
 def test_engine():
     engine = create_async_engine(
         os.environ["DATABASE_URL"],
+        connect_args={"ssl": "require"},
         poolclass=NullPool,
     )
     return engine
