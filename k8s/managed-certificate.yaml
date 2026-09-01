@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: fastapi-blog-cert
+spec:
+  domains:
+    - blogsj.duckdns.org
