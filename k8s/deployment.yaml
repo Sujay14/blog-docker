@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fastapi-blog
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: fastapi-blog
+
+  template:
+    metadata:
+      labels:
+        app: fastapi-blog
+
+    spec:
+      containers:
+        - name: fastapi-blog
+          image: asia-south1-docker.pkg.dev/blog-fastapi-506511/fastapiblog-repo/fastapi-blog:latest
+
+          ports:
+            - containerPort: 8080
+# apiVersion: apps/v1
+# kind: Deployment
+
+# metadata:
+#   name: fastapi-blog
+
+# spec:
+#   replicas: 3
+
+#   selector:
+#     matchlabs:
+#       app: fastapi-blog
+
+#   template:
+#     metadata:
+#       labels:
+#         app: fastapi-blog
+
+#     spec:
+#       containers:
+#         - name: fastapi-nlog
+#           image: asia-south1-docker.pkg.dev/blog-fastapi-506511/fastapiblog-repo/fastapi-blog:latest
+
+#           ports:
+#             - containerPort: 8080
+    
